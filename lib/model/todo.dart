@@ -21,7 +21,7 @@ class ToDo {
   final DateTime creationTime;
   //uuidを使って匿名出来るようにする
   final String id;
-  //ToDoの内容を達成したか
+  //ToDoの内容を達成したか 
   final bool isDone;
 
   ToDo copyWith(

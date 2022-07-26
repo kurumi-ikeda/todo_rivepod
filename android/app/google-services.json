@@ -1,77 +1,34 @@
 {
   "project_info": {
-    "project_number": "136049611",
-    "project_id": "todo-40aa3",
-    "storage_bucket": "todo-40aa3.appspot.com"
+    "project_number": "754164381545",
+    "project_id": "todorivepod",
+    "storage_bucket": "todorivepod.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:136049611:android:7ad28d6ba1546714937c4e",
-        "android_client_info": {
-          "package_name": "com.example.riverpod_test"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "136049611-k3fu8td135t87r4f4ffmnnj929qs8vkv.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCsn32GlLaaIJGOjs_wzi24PiCnN2BzFdw"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "136049611-k3fu8td135t87r4f4ffmnnj929qs8vkv.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "136049611-kfkuqrt9e58gqsie9mq5rsekcm28vdeg.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.riverpodTest"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:136049611:android:a4b3e1ae95c5c5de937c4e",
+        "mobilesdk_app_id": "1:754164381545:android:aad3e03d68435816ebaff8",
         "android_client_info": {
           "package_name": "com.example.todo_riverpod"
         }
       },
       "oauth_client": [
         {
-          "client_id": "136049611-k3fu8td135t87r4f4ffmnnj929qs8vkv.apps.googleusercontent.com",
+          "client_id": "754164381545-oa0in6mle921crhnnliuuu9ppcvn4c1n.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCsn32GlLaaIJGOjs_wzi24PiCnN2BzFdw"
+          "current_key": "AIzaSyDJgzpwtVSKUcj-5216oU25yf8BEJZo7LU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "136049611-k3fu8td135t87r4f4ffmnnj929qs8vkv.apps.googleusercontent.com",
+              "client_id": "754164381545-oa0in6mle921crhnnliuuu9ppcvn4c1n.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "136049611-kfkuqrt9e58gqsie9mq5rsekcm28vdeg.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.riverpodTest"
-              }
             }
           ]
         }
