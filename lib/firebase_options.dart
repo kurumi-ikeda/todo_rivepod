@@ -44,40 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyD0sGwcKNKIXGj9gXCUShDAK-Rb0xel1fI',
-    appId: '1:136049611:web:a0c1eb5d17975d76937c4e',
-    messagingSenderId: '136049611',
-    projectId: 'todo-40aa3',
-    authDomain: 'todo-40aa3.firebaseapp.com',
-    storageBucket: 'todo-40aa3.appspot.com',
-    measurementId: 'G-3CKXY02QMQ',
+    apiKey: 'AIzaSyAM1am_YgCUDYwFKEYLdhCYUDtetVuybEE',
+    appId: '1:754164381545:web:c56ea1b6e00d7056ebaff8',
+    messagingSenderId: '754164381545',
+    projectId: 'todorivepod',
+    authDomain: 'todorivepod.firebaseapp.com',
+    storageBucket: 'todorivepod.appspot.com',
+    measurementId: 'G-W8P1QBK85P',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCsn32GlLaaIJGOjs_wzi24PiCnN2BzFdw',
-    appId: '1:136049611:android:a4b3e1ae95c5c5de937c4e',
-    messagingSenderId: '136049611',
-    projectId: 'todo-40aa3',
-    storageBucket: 'todo-40aa3.appspot.com',
+    apiKey: 'AIzaSyDJgzpwtVSKUcj-5216oU25yf8BEJZo7LU',
+    appId: '1:754164381545:android:aad3e03d68435816ebaff8',
+    messagingSenderId: '754164381545',
+    projectId: 'todorivepod',
+    storageBucket: 'todorivepod.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDjXHrMe-obK7zHhnHXlLQFU5ksYDjdDF4',
-    appId: '1:136049611:ios:37a8ea1b0bad097a937c4e',
-    messagingSenderId: '136049611',
-    projectId: 'todo-40aa3',
-    storageBucket: 'todo-40aa3.appspot.com',
-    iosClientId: '136049611-lj4t533cr3ug9gouj2m2gf78sgferrog.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBZIiMiz6LQD8Zj6lpFG_JxG5h0y_L6fyc',
+    appId: '1:754164381545:ios:599b3840033c9e37ebaff8',
+    messagingSenderId: '754164381545',
+    projectId: 'todorivepod',
+    storageBucket: 'todorivepod.appspot.com',
+    iosClientId: '754164381545-3s5d1shjdliafnbhc15borcefi1io616.apps.googleusercontent.com',
     iosBundleId: 'com.example.todoRiverpod',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDjXHrMe-obK7zHhnHXlLQFU5ksYDjdDF4',
-    appId: '1:136049611:ios:37a8ea1b0bad097a937c4e',
-    messagingSenderId: '136049611',
-    projectId: 'todo-40aa3',
-    storageBucket: 'todo-40aa3.appspot.com',
-    iosClientId: '136049611-lj4t533cr3ug9gouj2m2gf78sgferrog.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBZIiMiz6LQD8Zj6lpFG_JxG5h0y_L6fyc',
+    appId: '1:754164381545:ios:599b3840033c9e37ebaff8',
+    messagingSenderId: '754164381545',
+    projectId: 'todorivepod',
+    storageBucket: 'todorivepod.appspot.com',
+    iosClientId: '754164381545-3s5d1shjdliafnbhc15borcefi1io616.apps.googleusercontent.com',
     iosBundleId: 'com.example.todoRiverpod',
   );
 }
