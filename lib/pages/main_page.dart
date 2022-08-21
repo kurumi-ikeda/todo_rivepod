@@ -39,8 +39,6 @@ class MainPage extends ConsumerWidget {
                 id: documentId,
                 isDone: documentData['isDone'] as bool);
           }).toList();
-
-          print(toDoList.toString());
           WidgetsBinding.instance.addPostFrameCallback((_) {
             for (final ToDo toDo in toDoList) {
               if (toDos.map((e) => e.id).contains(toDo.id)) {
@@ -49,10 +47,6 @@ class MainPage extends ConsumerWidget {
               ref.read(toDosProvider.notifier).addTodo(toDo);
             }
           });
-          print(toDos.length.toString() + "aaa");
-
-          // print(toDoList.)
-
           return const ToDoListView();
         },
         loading: () {
