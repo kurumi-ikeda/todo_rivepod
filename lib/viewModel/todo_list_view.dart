@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../model/firebase_access.dart';
 import '../model/todo.dart';
 
 class ToDoListView extends ConsumerWidget {
@@ -16,6 +17,7 @@ class ToDoListView extends ConsumerWidget {
           CheckboxListTile(
             secondary: IconButton(
               onPressed: () {
+                FirebaseAccess().deleteToDoFirestore(toDo);
                 ref.read(toDosProvider.notifier).removeTodo(toDo.id);
               },
               icon: const Icon(
