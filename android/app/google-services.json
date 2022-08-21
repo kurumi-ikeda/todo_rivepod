@@ -29,6 +29,13 @@
             {
               "client_id": "754164381545-oa0in6mle921crhnnliuuu9ppcvn4c1n.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "754164381545-3s5d1shjdliafnbhc15borcefi1io616.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.todoRiverpod"
+              }
             }
           ]
         }

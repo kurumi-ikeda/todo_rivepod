@@ -39,7 +39,7 @@ class _ToDosNotifier extends StateNotifier<List<ToDo>> {
 
   void addTodo(ToDo toDo) {
     state = [...state, toDo];
-    print(state);
+    // print(state);
   }
 
   void removeTodo(String toDoId) {
