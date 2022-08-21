@@ -1,15 +1,18 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:todo_riverpod/model/firebase_access.dart';
+import 'package:todo_riverpod/viewModel/todo_list_view.dart';
 
-import '../model/firebase_access.dart';
+import '../model/todo.dart';
 import '../viewModel/todo_create.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class MainPage extends ConsumerWidget {
   const MainPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    List<ToDo> toDos = ref.watch(toDosProvider);
     final firebaseAccessInstance = ref.watch(firebaseAccessProvider);
     return Scaffold(
       appBar: AppBar(
@@ -18,37 +21,44 @@ class MainPage extends ConsumerWidget {
           ToDoCreate(),
         ],
       ),
+      // body: const ToDoListView(),
       body: firebaseAccessInstance.when(
         error: (e, stackTrace) {
           return Text(e.toString());
         },
         data: (data) {
-          final list = data.docs.map<String>((DocumentSnapshot document) {
+          final List<ToDo> toDoList =
+              data.docs.map((DocumentSnapshot document) {
             final documentData = document.data()! as Map<String, dynamic>;
-            // print(documentData);
-            print(documentData['isDone'] as bool);
-            return documentData['text']! as String;
+            String documentId = document.id;
+
+            //firestoreから手に入れたデータをToDoクラスに変換
+            return ToDo(
+                text: documentData['text']! as String,
+                creationTime: documentData['creationTime'].toDate(),
+                id: documentId,
+                isDone: documentData['isDone'] as bool);
           }).toList();
 
-          final reverseList = list.reversed.toList();
+          print(toDoList.toString());
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            for (final ToDo toDo in toDoList) {
+              if (toDos.map((e) => e.id).contains(toDo.id)) {
+                continue;
+              }
+              ref.read(toDosProvider.notifier).addTodo(toDo);
+            }
+          });
+          print(toDos.length.toString() + "aaa");
 
-          return ListView.builder(
-              itemCount: reverseList.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Center(
-                    child: Text(
-                  reverseList[index],
-                  style: const TextStyle(fontSize: 20),
-                ));
-              });
+          // print(toDoList.)
+
+          return const ToDoListView();
         },
         loading: () {
           return const Center(child: CircularProgressIndicator());
         },
       ),
     );
-
-    // `ref` を使ってプロバイダーを監視する
-    // final counter = ref.watch(counterProvider);
   }
 }
