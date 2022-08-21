@@ -38,6 +38,7 @@ class _ToDosNotifier extends StateNotifier<List<ToDo>> {
   _ToDosNotifier() : super([]);
 
   void addTodo(ToDo toDo) {
+    
     state = [...state, toDo];
     // print(state);
   }

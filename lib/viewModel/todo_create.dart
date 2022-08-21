@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../model/firebase_access.dart';
 import '../model/todo.dart';
-
 
 class ToDoCreate extends ConsumerStatefulWidget {
   const ToDoCreate({Key? key}) : super(key: key);
@@ -25,10 +25,9 @@ class _ToDoCreateState extends ConsumerState<ToDoCreate> {
           if (inputText == null || inputText.isEmpty) {
             return;
           }
-
-          ref
-              .read(toDosProvider.notifier)
-              .addTodo(ToDo.create(text: inputText));
+          final ToDo finishedToDo = ToDo.create(text: inputText);
+          //firestoreに登録
+          FirebaseAccess().addToDoFirestore(finishedToDo);
         },
         icon: const Icon(Icons.add));
   }
