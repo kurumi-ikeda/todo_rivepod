@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:todo_riverpod/model/todo.dart';
 
 final firebaseAccessProvider = StreamProvider.autoDispose((ref) {
   return FirebaseFirestore.instance
@@ -9,3 +10,13 @@ final firebaseAccessProvider = StreamProvider.autoDispose((ref) {
       .orderBy("creationTime")
       .snapshots();
 });
+
+class FirebaseAccess {
+  addToDoFirestore(final ToDo toDo) {
+    FirebaseFirestore.instance.collection('ToDo').doc().set({
+      "creationTime": Timestamp.fromDate(toDo.creationTime),
+      "isDone": toDo.isDone,
+      "text": toDo.text
+    });
+  }
+}

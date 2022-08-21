@@ -21,7 +21,6 @@ class MainPage extends ConsumerWidget {
           ToDoCreate(),
         ],
       ),
-      // body: const ToDoListView(),
       body: firebaseAccessInstance.when(
         error: (e, stackTrace) {
           return Text(e.toString());
