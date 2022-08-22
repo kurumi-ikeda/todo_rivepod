@@ -24,4 +24,16 @@ class FirebaseAccess {
   deleteToDoFirestore(final ToDo toDo) {
     FirebaseFirestore.instance.collection("ToDo").doc(toDo.id).delete();
   }
+
+  isDoneChangeFirestore(final ToDo toDo) async {
+    final DocumentSnapshot document =
+        await FirebaseFirestore.instance.collection("ToDo").doc(toDo.id).get();
+    final documentData = document.data()! as Map<String, dynamic>;
+    final bool isDone = documentData['isDone'] as bool;
+
+    FirebaseFirestore.instance
+        .collection("ToDo")
+        .doc(toDo.id)
+        .update({"isDone": !isDone});
+  }
 }

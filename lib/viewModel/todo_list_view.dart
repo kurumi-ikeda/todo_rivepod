@@ -29,8 +29,10 @@ class ToDoListView extends ConsumerWidget {
             subtitle: Text(
                 "${toDo.creationTime.year}年${toDo.creationTime.month}月${toDo.creationTime.day}日${toDo.creationTime.hour}時${toDo.creationTime.minute}分"),
             value: toDo.isDone,
-            onChanged: (value) =>
-                ref.read(toDosProvider.notifier).isDoneChange(toDo.id),
+            onChanged: (value) {
+              FirebaseAccess().isDoneChangeFirestore(toDo);
+              ref.read(toDosProvider.notifier).isDoneChange(toDo.id);
+            },
           )
       ],
     );
