@@ -1,16 +1,20 @@
 # todo_riverpod
 
-A new Flutter project.
+## はじめに
 
-## Getting Started
+Firebase、Riverpod の学習を目的に作った ToDo アプリです。
+Firestore にアクセスしデータを保存、削除、読み込みなどが出来るようにしています。
 
-This project is a starting point for a Flutter application.
+## 使用技術、バージョン
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter 3.0.4
+- flutter_riverpod: ^1.0.3
+- firebase_core: ^1.19.2
+- cloud_firestore: ^3.4.0
+- uuid: ^3.0.6
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p>
+    <img src="https://user-images.githubusercontent.com/65322807/185929514-186c62cb-cdad-47d7-83c2-172121fce251.png" width="30%">
+  <img src="https://user-images.githubusercontent.com/65322807/185929504-63eae0af-ca51-4a02-b941-3ee4fa9b69a8.png" width="30%">
+  
+</p>
